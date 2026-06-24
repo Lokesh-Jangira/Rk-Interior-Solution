@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK Interior Solutions </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/root.css?v=1.0.01">
+    <link rel="stylesheet" href="css/navigation.css?v=1.0.01">
+    <link rel="stylesheet" href="css/scrollbar.css?v=1.0.01">
+    <link rel="stylesheet" href="css/animation2d.css?v=1.0.01">
+    <link rel="stylesheet" href="css/style.css?v=1.0.01">
+
+    <!-- === Favicon === -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+</head>
+<body>
+<!-- === Navigation Bar SECTION START === -->
+<!-- === HEADER SECTION START === -->
+<header class="navbar">
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="/" rel="home">
+                <img src="assets/Logo.png" alt="RK Interior Solutions" class="site-logo">
+            </a>
+        </div>
+
+        <nav class="nav-center" aria-label="Main Navigation">
+            <ul class="nav-center-menu">
+                <li><a href="pages/category/residentialInterior.html">Our Work</a></li>
+
+                <li class="nav-center-more">
+                    <a href="#" class="more-btn" aria-haspopup="true">Services ▾</a>
+
+                    <section class="mega-menu">
+                        <div class="menu-column">
+                            <h4>SERVICES</h4>
+                            <article class="menu-box">
+                                <a href="pages/category/residentialInterior.html">
+                                    <span>Residential Interior</span>
+                                    <p>Explore our Residential interior.</p>
+                                </a>
+                            </article>
+                            <article class="menu-box">
+                                <a href="pages/category/officeInterior.html">
+                                    <span>Office Interior</span>
+                                    <p>Explore our Office interior.</p>
+                                </a>
+                            </article>
+                            <article class="menu-box">
+                                <a href="pages/category/modularKitchen.html">
+                                    <span>Modular Kitchens</span>
+                                    <p>Explore our Modular Kitchens.</p>
+                                </a>
+                            </article>
+                        </div>
+
+                        <div class="menu-column">
+                            <h4>RESOURCE & COMMUNITY</h4>
+                            <article class="menu-item">
+                                <a href="#">
+                                    <strong>Free Estimators</strong>
+                                    <span class="badge">FREE</span>
+                                    <p>Accurate estimates for your dream interior.</p>
+                                </a>
+                            </article>
+                            <article class="menu-item">
+                                <a href="pages/category/livingRoom.html">
+                                    <strong>Home Interior Guide</strong>
+                                    <p>Expert articles for stress-free home interior.</p>
+                                </a>
+                            </article>
+                            <article class="menu-item">
+                                <a href="pages/navigationPages/contact.html">
+                                    <strong>Contact Us</strong>
+                                    <p>Talk to our interior experts today.</p>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+                </li>
+
+                <li><a href="pages/navigationPages/about.html">About</a></li>
+                <li><a href="pages/navigationPages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <aside class="nav-right">
+            <div class="nav-right-call">
+                📞 <a href="tel:+919871351370"><span>+91 9871351370</span></a>
+            </div>
+            <a href="https://wa.me/9871351370" class="nav-right-cta-btn" target="_blank">Let’s Build</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open Mobile Menu" aria-controls="mobileMenu">
+                <i class="bx bx-menu"></i>
+            </button>
+        </aside>
+
+    </div>
+</header>
+<!-- ==== HEADER SECTION END ==== -->
+
+<!-- ==== MOBILE VIEW NAVIGATION BAR START ==== -->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation" aria-hidden="true">
+
+    <button class="close-menu" id="closeMenu" aria-label="Close Mobile Menu">
+        <i class="bx bx-x"></i>
+    </button>
+
+    <ul>
+        <li><a href="/Index.html">Home</a></li>
+        <li><a href="pages/category/residentialInterior.html">Our Work</a></li>
+        <li><a href="pages/navigationPages/about.html">About Us</a></li>
+        
+        <li>
+            <h4>SERVICES</h4>
+            <ul>
+                <li><a href="pages/category/residentialInterior.html">Residential Interior</a></li>
+                <li><a href="pages/category/officeInterior.html">Office Interior</a></li>
+                <li><a href="pages/category/modularKitchen.html">Modular Kitchens</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <h4>RESOURCE & COMMUNITY</h4>
+            <ul>
+                <li><a href="#">Free Estimators</a></li>
+                <li><a href="pages/category/livingRoom.html">Home Interior Guide</a></li>
+                <li><a href="pages/navigationPages/contact.html">Contact Us</a></li>
+            </ul>
+        </li>
+
+        <li><a href="pages/navigationPages/contact.html">Contact</a></li>
+    </ul>
+</nav>
+<!-- === MOBILE VIEW NAVIGATION BAR End === -->
+<!-- === Navigation Bar SECTION End === -->
+
+<!-- === Hero Section Start === -->
+<aside id="customAlert" class="alert-overlay" aria-hidden="true">
+    <article class="alert-box">
+        <p id="alertMessage"></p>
+    </article>
+</aside>
+
+<section class="hero-section" id="hero">
+    
+    <article class="hero-content">
+        <header>
+            <mark class="hero-badge">EST. 2016 | RK Interior Solutions</mark>
+            <h1 class="hero-title">
+                Design Space <br>
+                <span>That Define You</span>
+            </h1>
+        </header>
+
+        <p class="hero-description">
+            Crafting bespoke residential and commercial interiors that enhance 
+            your home interior appearance 10 times.
+        </p>
+
+        <footer class="hero-stats">
+            <figure class="stat-item">
+                <strong>250+</strong>
+                <figcaption>HOMES DELIVERED</figcaption>
+            </figure>
+            <figure class="stat-item">
+                <strong>5+</strong>
+                <figcaption>CITIES COVERED</figcaption>
+            </figure>
+            <figure class="stat-item">
+                <strong>2000+</strong>
+                <figcaption>DESIGN EXPERTS</figcaption>
+            </figure>
+        </footer>
+    </article>
+
+    <aside class="hero-form-container">
+        <form class="contact-form">
+            <header>
+                <h2>Book a Design Session</h2>
+                <p>Start your home transformation today.</p>
+            </header>
+
+            <fieldset class="form-body">
+                <input id="name" type="text" placeholder="Full Name*" required>
+
+                <label class="phone-input">
+                    <span>+91</span>
+                    <input id="phone" type="tel" placeholder="Mobile Number*" required>
+                </label>
+
+                <input id="email" type="email" placeholder="Email Address*" required>
+
+                <input id="location" type="text" placeholder="Location of your plot*" required>
+
+                <button type="submit" class="submit-btn">Submit <i class='bx bx-right-arrow-alt'></i></button>
+
+                <small class="form-policy">
+                    By submitting this form, I confirm that I have read and agreed to accept
+                    RK Interior Solutions <a href="#">privacy policy</a>
+                </small>
+            </fieldset>
+        </form>
+    </aside>
+</section>
+<!-- === Hero Section End === -->
+
+<!-- === About Section Start === -->
+<section class="about-section" id="about">
+
+    <!-- ===== ROW 1 (Image + Content) ===== -->
+    <article class="about-row">
+
+        <!-- LEFT: OWNER IMAGE -->
+        <figure class="about-image">
+            <img src="assets/heroSection/heroSection-1.jpg" alt="RK Interior Owner">
+        </figure>
+
+        <!-- RIGHT: CONTENT -->
+        <aside class="about-content">
+            <header>
+                <h2>About RK Interior Solutions</h2>
+                <p>
+                    We specialize in crafting premium residential and commercial interiors 
+                    that reflect elegance, comfort, and functionality. Led by 
+                    <strong>Rajesh Ahlawat</strong>, our team transforms ideas into reality 
+                    with creative precision.
+                </p>
+            </header>
+
+            <p>
+                With years of experience in the interior industry, we focus on delivering 
+                high-quality designs that not only look stunning but also enhance your 
+                lifestyle. Our approach combines innovation, attention to detail, and 
+                customer satisfaction.
+            </p>
+        </aside>
+
+    </article>
+
+    <!-- ===== ROW 2 (FULL WIDTH BULLETS) ===== -->
+    <article class="about-features">
+
+        <ul>
+            <li>
+                <i class='bx bx-check-circle'></i>
+                Premium Quality Materials & Finishing
+            </li>
+
+            <li>
+                <i class='bx bx-check-circle'></i>
+                Customized Interior Solutions for Every Client
+            </li>
+
+            <li>
+                <i class='bx bx-check-circle'></i>
+                On-Time Project Delivery with Transparency
+            </li>
+
+            <li>
+                <i class='bx bx-check-circle'></i>
+                Experienced Designers & Skilled Workforce
+            </li>
+
+            <li>
+                <i class='bx bx-check-circle'></i>
+                Modern, Luxury & Functional Design Approach
+            </li>
+
+            <li>
+                <i class='bx bx-check-circle'></i>
+                Trusted by Hundreds of Happy Clients
+            </li>
+        </ul>
+
+    </article>
+
+</section>
+<!-- === About Section End === -->
+
+<!-- === Category Section Start === -->
+<section class="category-section" id="categories">
+
+    <header class="category-header">
+        <h2>Our Interior Categories</h2>
+        <p>Explore our wide range of premium interior solutions</p>
+    </header>
+
+    <article class="category-grid">
+
+        <!-- 1 -->
+        <a href="pages/category/residentialInterior.html" class="category-link">
+            <figure class="category-card">
+                <img src="assets/heroSection/heroSection-1.jpg" alt="Residential Interior">
+                <figcaption>
+                    <h3>Residential Interior</h3>
+                </figcaption>
+            </figure>
+        </a>
+
+        <!-- 2 -->
+        <a href="pages/category/officeInterior.html" class="category-link">
+            <figure class="category-card">
+                <img src="assets/heroSection/heroSection-1.jpg" alt="Office Interior">
+                <figcaption>
+                    <h3>Office Interior</h3>
+                </figcaption>
+            </figure>
+        </a>
+
+        <!-- 3 -->
+        <a href="pages/category/modularKitchen.html" class="category-link">
+            <figure class="category-card">
+                <img src="assets/kitchen/u-shape.webp" alt="Modular Kitchen">
+                <figcaption>
+                    <h3>Modular Kitchen</h3>
+                </figcaption>
+            </figure>
+        </a>
+
+        <!-- 4 -->
+        <a href="pages/category/bedroom.html" class="category-link">
+            <figure class="category-card">
+                <img src="assets/heroSection/heroSection-1.jpg" alt="Bedroom Design">
+                <figcaption>
+                    <h3>Bedroom Design</h3>
+                </figcaption>
+            </figure>
+        </a>
+
+        <!-- 5 -->
+        <a href="pages/category/livingRoom.html" class="category-link">
+            <figure class="category-card">
+                <img src="assets/heroSection/heroSection-1.jpg" alt="Living Room">
+                <figcaption>
+                    <h3>Living Room Design</h3>
+                </figcaption>
+            </figure>
+        </a>
+
+        <!-- 6 -->
+        <a href="pages/category/falseCeiling.html" class="category-link">
+            <figure class="category-card">
+                <img src="assets/heroSection/heroSection-1.jpg" alt="False Ceiling">
+                <figcaption>
+                    <h3>False Ceiling</h3>
+                </figcaption>
+            </figure>
+        </a>
+
+        <!-- 7 -->
+        <a href="pages/category/wardrobe.html" class="category-link">
+            <figure class="category-card">
+                <img src="assets/heroSection/heroSection-1.jpg" alt="Wardrobe Design">
+                <figcaption>
+                    <h3>Wardrobe Design</h3>
+                </figcaption>
+            </figure>
+        </a>
+
+        <!-- 8 -->
+        <a href="pages/category/commercialInteriro.html" class="category-link">
+            <figure class="category-card">
+                <img src="assets/heroSection/heroSection-1.jpg" alt="Commercial Interior">
+                <figcaption>
+                    <h3>Commercial Interior</h3>
+                </figcaption>
+            </figure>
+        </a>
+
+    </article>
+
+</section>
+<!-- === Category Section End === -->
+
+
+
+<!-- === 2D Into 3D Section Start === -->
+<!-- === 2D Into 3D Section End === -->
+
+
+
+<!-- ===== WHY CHOOSE US SECTION START ===== -->
+<section class="why-choose">
+
+    <header class="why-header">
+        <h2>Why Choose RK Interior Solutions</h2>
+        <p>We don’t just design spaces — we create experiences that reflect your personality and lifestyle.</p>
+    </header>
+
+    <article class="why-grid">
+
+        <section class="why-card">
+            <i class='bx bx-award'></i>
+            <h3>Premium Quality Work</h3>
+            <p>We deliver top-notch craftsmanship with attention to every detail.</p>
+        </section>
+
+        <section class="why-card">
+            <i class='bx bx-user-check'></i>
+            <h3>Customer-Centric Approach</h3>
+            <p>Your vision is our priority. We design exactly what you imagine.</p>
+        </section>
+
+        <section class="why-card">
+            <i class='bx bx-time'></i>
+            <h3>On-Time Delivery</h3>
+            <p>We respect your time and ensure projects are completed on schedule.</p>
+        </section>
+
+        <section class="why-card">
+            <i class='bx bx-wallet'></i>
+            <h3>Budget Friendly</h3>
+            <p>Luxury interiors that fit your budget without compromising quality.</p>
+        </section>
+
+        <section class="why-card">
+            <i class='bx bxs-bulb'></i>
+            <h3>Creative Designs</h3>
+            <p>Innovative and modern interior ideas tailored for your space.</p>
+        </section>
+
+        <section class="why-card">
+            <i class='bx bx-home-heart'></i>
+            <h3>End-to-End Solutions</h3>
+            <p>From concept to completion — we handle everything for you.</p>
+        </section>
+
+    </article>
+
+</section>
+<!-- ===== WHY CHOOSE US SECTION END ===== -->
+
+<!-- ===== Projects SECTION Start ===== -->
+<section class="project-section">
+
+    <!-- HEADER -->
+    <header class="project-header">
+        <h2>Our Project's</h2>
+        <p>Explore our wide range of premium interior solutions</p>
+    </header>
+
+    <!-- PROJECT GRID -->
+    <article class="project-grid">
+
+        <!-- PROJECT 1 -->
+        <a href="pages/category/residentialInterior.html" class="project-link">
+
+            <figure class="project-card">
+
+                <img 
+                    src="assets/heroSection/heroSection-1.jpg" 
+                    alt="RK Interior Solutions Projects"
+                >
+
+                <figcaption class="project-overlay">
+                    <h3>Our Project's</h3>
+                </figcaption>
+
+            </figure>
+
+        </a>
+
+    </article>
+
+</section>
+<!-- ===== Projects SECTION END ===== -->
+
+<!-- ===== GOOGLE REVIEWS SECTION START ===== -->
+<section class="reviews-section">
+
+    <header class="reviews-header">
+        <h2>What Our Clients Say</h2>
+
+        <p>
+            Genuine Google reviews from our happy clients across Gurgaon, New Gurgaon & Manesar.
+        </p>
+    </header>
+
+    <article class="reviews-grid">
+
+        <!-- REVIEW 1 -->
+        <article class="review-card">
+
+            <header class="review-top">
+
+                <aside class="review-user">
+                    <h3>Tanuj Sahoo</h3>
+                    <small>Home Interior Client • Sector 91 Gurgaon</small>
+                </aside>
+
+                <strong class="review-stars">
+                    ★★★★★
+                </strong>
+
+            </header>
+
+            <p class="review-text">
+                If you're looking for reliable, top-quality, and classy interior solutions in Gurgaon, I highly recommend Rajesh Ahlawat and his team at R K Interior Solutions.
+
+                I got my home interior done in Sector 91, and from start to finish, the experience was exceptional. The design phase was very collaborative — Rajesh made sure to understand my vision, preferences, and lifestyle before proposing any ideas. What impressed me the most was how open the team was to discussions and suggestions. They never rushed decisions and were always ready to listen patiently and adjust the plan according to what I had in mind.
+
+                The communication throughout the project was smooth and transparent. They clearly explained the scope of work, shared realistic timelines, and kept me informed every step of the way. Any changes I requested — whether small or significant — were handled with complete professionalism and a positive attitude.
+
+                One of the standout features was their use of 3D visualizations. For every design idea or layout, they provided detailed 3D images, which helped me visualize the space more accurately and make confident choices. This really took the guesswork out of the process.
+
+                The quality of work was top-notch, with great attention to detail in every element — from furniture and finishes to lighting and color schemes. Even after completing the project, Rajesh remained responsive. It’s been over a year, and he’s still available for support, which speaks volumes about their commitment and reliability.
+
+                If you're planning interiors in Gurugram / New Gurugram or anywhere nearby, I strongly recommend giving R K Interior Solutions a chance. Their dedication, professionalism, and customer-first approach truly make them stand out. This is not just a service — it’s a partnership where your ideas are valued, and the final outcome is something you’ll be proud of.
+            </p>
+
+            <footer class="review-footer">
+                <span>Google Review</span>
+                <span>8 Months Ago</span>
+            </footer>
+
+        </article>
+
+        <!-- REVIEW 2 -->
+        <article class="review-card">
+
+            <header class="review-top">
+
+                <aside class="review-user">
+                    <h3>Ekta Jain</h3>
+                    <small>Residential Interior Client</small>
+                </aside>
+
+                <strong class="review-stars">
+                    ★★★★★
+                </strong>
+
+            </header>
+
+            <p class="review-text">
+                Hello everyone!
+                If you’re planning to renovate your home or enhance its beauty, I highly recommend RK Interiors. Their work is truly impressive—especially their design expertise, which gives your space a whole new charm.
+                I got my home interiors done by them and I’m extremely happy with the results. Highly recommended and kindly refer the insta page for more details!!
+            </p>
+
+            <footer class="review-footer">
+                <span>Google Review</span>
+                <span>8 Months Ago</span>
+            </footer>
+
+        </article>
+
+        <!-- REVIEW 3 -->
+        <article class="review-card">
+
+            <header class="review-top">
+
+                <aside class="review-user">
+                    <h3>Ramnik Kumar</h3>
+                    <small>Luxury Home Interior</small>
+                </aside>
+
+                <strong class="review-stars">
+                    ★★★★★
+                </strong>
+
+            </header>
+
+            <p class="review-text">
+                I recently got my home interiors done by RK interiors , and I’m extremely pleased with the outcome. The entire team demonstrated professionalism, creativity, and a strong commitment to quality from day one.
+
+                What stood out the most was their attention to detail and their ability to understand exactly what we envisioned. They offered thoughtful suggestions, were patient with revisions and changes required , and ensured every element—from design to execution—was completed to perfection.
+            </p>
+
+            <footer class="review-footer">
+                <span>Google Review</span>
+                <span>5 Months Ago</span>
+            </footer>
+
+        </article>
+
+        <!-- REVIEW 4 -->
+        <article class="review-card">
+
+            <header class="review-top">
+
+                <aside class="review-user">
+                    <h3>Abhishek Vashistha</h3>
+                    <small>Complete Home Interior Project</small>
+                </aside>
+
+                <strong class="review-stars">
+                    ★★★★★
+                </strong>
+
+            </header>
+
+            <p class="review-text">
+                I recently got my home interiors done by RK Interior Solutions, and I must say the experience has been truly satisfying. Their team handled a wide range of work for us—including the kitchen, wardrobes, electrical refittings, tiles work, wooden gates, aluminum frames, and false ceiling.
+
+                What impressed me the most was their attention to detail and finesse in execution. Every corner of the house reflects precision and thoughtful workmanship. They didn’t just execute the plan but also guided us with their consulting service, offering practical and creative suggestions that enhanced the final outcome.
+
+                Yes, their pricing was slightly on the higher side, but when you see the quality of materials used, the neatness of finishing, and the durability of their work, it feels absolutely worth it. The overall experience has been smooth, and I am happy to recommend RK Interior Solutions to anyone looking for reliable, high-quality interiors.
+            </p>
+
+            <footer class="review-footer">
+                <span>Google Review</span>
+                <span>7 Months Ago</span>
+            </footer>
+
+        </article>
+
+        <!-- REVIEW 5 -->
+        <article class="review-card">
+
+            <header class="review-top">
+
+                <aside class="review-user">
+                    <h3>Ritesh Lal</h3>
+                    <small>Interior Design Client</small>
+                </aside>
+
+                <strong class="review-stars">
+                    ★★★★★
+                </strong>
+
+            </header>
+
+            <p class="review-text">
+                RK Interior Solution truly understands customer needs. From design suggestions to final installation, everything was handled professionally. I’m extremely happy with the result!
+                Thank you Rajesh Ji.
+            </p>
+
+            <footer class="review-footer">
+                <span>Google Review</span>
+                <span>5 Months Ago</span>
+            </footer>
+
+        </article>
+
+        <!-- REVIEW 6 -->
+        <article class="review-card">
+
+            <header class="review-top">
+
+                <aside class="review-user">
+                    <h3>Sanjeev Sansanwal</h3>
+                    <small>New Gurgaon Interior Project</small>
+                </aside>
+
+                <strong class="review-stars">
+                    ★★★★★
+                </strong>
+
+            </header>
+
+            <p class="review-text">
+                R K Interior provides the best interior service I have experienced so far. Their team is highly professional, creative, and committed to delivering top-quality work. From design ideas to execution, everything was handled with great attention to detail and perfection. They transformed my space beautifully, exactly the way I had imagined.
+
+                Highly recommended for anyone looking for reliable and classy interior solutions in New Gurgaon 👍👍👍
+            </p>
+
+            <footer class="review-footer">
+                <span>Google Review</span>
+                <span>8 Months Ago</span>
+            </footer>
+
+        </article>
+
+    </article>
+
+</section>
+<!-- ===== GOOGLE REVIEWS SECTION END ===== -->
+
+<!-- ===== FAQ SECTION START ===== -->
+<section class="faq-section">
+
+    <header class="faq-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common interior design queries in Gurgaon & Manesar.</p>
+    </header>
+
+    <section class="faq-container">
+
+        <!-- FAQ ITEM -->
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Do you provide interior design services in South Gurgaon & IMT Manesar?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Yes, we offer complete interior design services in South Gurgaon and IMT Manesar including residential and office projects.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>How can I find the best interior designer near me?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                If you're searching for "interior designer near me", RK Interior provides expert solutions with modern design and execution support.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Do you design modular kitchens in Gurgaon?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Yes, we specialize in modular kitchen design in Gurgaon with modern layouts, smart storage, and premium finishes.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>What types of interior design services do you offer?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                We offer residential interiors, office interiors, modular kitchens, false ceiling design, wardrobes, and complete home solutions.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Do you handle office interior projects in Manesar?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Yes, we design modern and functional office interiors in IMT Manesar with space optimization and professional aesthetics.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Can I customize my bedroom interior design?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Absolutely, we create personalized bedroom designs based on your lifestyle, space, and design preferences.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Do you provide complete home interior solutions?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Yes, we provide end-to-end home interior services from design planning to final execution.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>What makes your interior designs unique?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Our designs combine functionality, aesthetics, and modern trends to create luxurious yet practical spaces.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Do you offer space-saving interior solutions?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Yes, we specialize in smart and space-saving designs especially for small apartments and compact homes.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Can you design interiors for small homes?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Yes, we create efficient and stylish interiors for small homes with maximum space utilization.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Do you provide false ceiling designs?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Yes, we design modern false ceilings with lighting concepts that enhance your space aesthetics.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Is consultation available before starting the project?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Yes, we provide consultation to understand your requirements and suggest the best design solutions.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Do you design custom wardrobes?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Yes, we design custom wardrobes with modern storage solutions and premium finishes.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>How long does an interior project take?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                Project timelines depend on size and scope, but we always aim for timely and efficient execution.
+            </p>
+        </article>
+
+        <article class="faq-item">
+            <button class="faq-question">
+                <span>Do you provide interior design services near me?</span>
+                <i class='bx bx-plus'></i>
+            </button>
+            <p class="faq-answer">
+                If you are located in Gurgaon or Manesar, we are available to deliver complete interior design solutions near you.
+            </p>
+        </article>
+
+    </section>
+
+</section>
+<!-- ===== FAQ SECTION END ===== -->
+
+<!-- ==== Floating Contact Icons Start ==== -->
+<div class="floating-icons">
+  <a href="https://wa.me/9871351370" target="_blank" class="icon  whatsapp">
+    <i class='bx bxl-whatsapp'></i>
+  </a>
+
+  <a href="tel:9871351370" class="icon call">
+    <i class='bx bxs-phone-call'></i>
+  </a>
+</div>
+<!-- ==== Floating Contact Icons End ==== -->
+
+<!-- ===== FOOTER START ===== -->
+
+<footer class="footer">
+
+    <section class="footer-grid">
+
+        <!-- Column 1 -->
+        <article class="footer-col">
+            <h3>RK Interior Solutions</h3>
+            <p>
+                We design modern, functional and luxurious interiors that reflect 
+                your personality. From concept to execution. We bring your dream space to life.
+            </p>
+
+            <nav class="footer-social">
+                <a href="https://www.facebook.com/people/RK-Interior-Solutions/100092509257546" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/rkinteriorsolutions_official?utm_source=qr&igsh=MWZiaG5sOG84ZHA5aw==" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://youtube.com/@rkinteriorsolutions?si=EPekmfh_zEZhTsM3" target="_blank"><i  class='bx bxl-youtube'></i></a>
+                <a href="https://wa.me/9871351370" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            </nav>
+        </article>
+
+        <!-- Column 2 -->
+        <article class="footer-col">
+            <h3>Quick Links</h3>
+            <nav>
+                <a href="Index.html">Home</a>
+                <a href="pages/navigationPages/about.html">About Us</a>
+                <a href="pages/category/residentialInterior.html">Projects</a>
+                <a href="pages/navigationPages/contact.html">Contact Us</a>
+            </nav>
+        </article>
+
+        <!-- Column 3 -->
+        <article class="footer-col">
+            <h3>Our Services</h3>
+            <ul>
+                <li><i class='bx bx-check'></i> Modular Kitchen</li>
+                <li><i class='bx bx-check'></i> Living Room Design</li>
+                <li><i class='bx bx-check'></i> Bedroom Interiors</li>
+                <li><i class='bx bx-check'></i> Office Design</li>
+            </ul>
+        </article>
+
+        <!-- Column 4 -->
+        <article class="footer-col">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class='bx bx-map'></i> Nandu Farm, Near Regal Garden, Sector 90, Gurgaon, Haryana.</li>
+                <li><i class='bx bx-phone'></i> +91 9871351370</li>
+                <li><i class='bx bx-envelope'></i> info@rkinteriorsolutions.com</li>
+            </ul>
+        </article>
+    </section>
+
+    <hr>
+
+    <small class="footer-bottom">
+        © 2026 RK Interior Solution. All Rights Reserved.
+    </small>
+
+</footer>
+
+<!-- ===== FOOTER END ===== -->
+
+    <script src="js/script.js?v=1.0.01"></script>
+    <script src="js/toggle.js?v=1.0.01"></script>
+    <script src="js/formInfo.js?v=1.0.01"></script>
+    <script src="js/animation2d.js?v=1.0.01"></script>
+
+</body>
+</html>

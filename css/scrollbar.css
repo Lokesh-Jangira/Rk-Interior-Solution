@@ -1,0 +1,42 @@
+
+/* =========================================================
+                GLOBAL SCROLLBAR DESIGN 
+   ========================================================= */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 6px;              /* Vertical scrollbar */
+    height: 6px;             /* Horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Clean background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-blue);
+}
+
+/* =========================================================
+                FIREFOX SUPPORT 
+   ========================================================= */
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-blue) transparent;
+}
+
+/* =========================================================
+                SMOOTH SCROLL 
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}

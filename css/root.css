@@ -1,0 +1,67 @@
+:root {
+    /* --- 1. THEME COLORS (From Your New Image Palette) --- */
+    
+    /* Deep Navy-Plum (Darkest tone) */
+    --primary-blue: #1b1a2f; 
+    
+    /* Rich Wine Accent (Luxury highlight) */
+    --accent-blue: #a23b4c; 
+    
+    /* Muted Mauve (Soft support color) */
+    --secondary-blue: #8a4f7d; 
+    
+    /* Soft Warm Background (Premium light tone) */
+    --bg-light: #f6f1ef; 
+    
+    /* Peach-Gold Highlight (Elegant touch) */
+    --highlight-gold: #e49a5a; 
+
+
+    /* --- 2. TEXT COLORS --- */
+    --text-main: #1f1f1f;      
+    --text-muted: #7a6f73;     
+    --white: #FFFFFF;
+
+
+    /* --- 3. TYPOGRAPHY --- */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+
+    /* --- 4. LAYOUT & SPACING --- */
+    --container-width: 1400px;
+    --border-radius: 6px;
+    --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Premium shadow */
+    --shadow-premium: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-blue);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    color: inherit;
+}

@@ -1,0 +1,337 @@
+/* ===== HERO SECTION Start ===== */
+.ctg-hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/6;
+    overflow: hidden;
+}
+
+/* BACKGROUND */
+.ctg-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* GRADIENT OVERLAY */
+.ctg-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.85) 0%,   /* 🔥 strong dark left */
+        rgba(0,0,0,0.6) 40%,
+        rgba(0,0,0,0.2) 100%
+    );
+
+    z-index: 1;
+}
+
+/* CONTENT */
+.ctg-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+    color: var(--white);
+    max-width: 500px;
+    z-index: 2;
+}
+
+.ctg-hero-title {
+    color: var(--accent-blue);
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+
+    /* 🔥 TEXT GLOW + DEPTH */
+    text-shadow: 
+        0 2px 10px rgba(0, 0, 0, 0.7),
+        0 4px 20px rgba(0, 0, 0, 0.6);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.ctg-hero-subtitle {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+/* ===== ANIMATION (fallback agar tumhari file kaam na kare) ===== */
+
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== HERO SECTION End ===== */
+
+/* =========================================================
+                    CONTACT SECTION START
+   ========================================================= */
+
+.contact-section {
+    max-width: var(--container-width);
+    margin: auto;
+    padding: 100px 80px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* ===== LEFT SIDE ===== */
+.contact-left {
+    flex: 1;
+    color: var(--text-dark);
+}
+
+.contact-left h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+.contact-left p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+/* INFO */
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+/* ===== FORM SIDE ===== */
+.hero-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 12px;
+
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.contact-form p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.form-body {
+    border: none;
+}
+
+.form-body input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.form-body input:focus {
+    border-color: var(--accent-blue);
+    background: #ffffff;
+    outline: none;
+}
+
+/* PHONE INPUT */
+.phone-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 0 12px;
+    background: #f9fafb;
+    margin-bottom: 18px;
+}
+
+.phone-input span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.phone-input input {
+    border: none;
+    background: transparent;
+    margin: 0;
+}
+
+/* BUTTON */
+.submit-btn {
+    width: 100%;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: var(--accent-blue);
+    color: #fff;
+
+    font-weight: 600;
+    font-size: 1rem;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.form-policy {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+/* =========================================================
+                    MAP SECTION
+   ========================================================= */
+
+.map-section {
+    max-width: var(--container-width);
+    margin: 60px auto;
+    padding: 0 80px;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 420px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* =========================================================
+                    EXTRA SECTION
+   ========================================================= */
+
+.contact-extra {
+    max-width: var(--container-width);
+    margin: auto;
+    padding: 80px 80px;
+    text-align: center;
+}
+
+.contact-extra h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--primary-blue);
+}
+
+.contact-extra p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+/* =========================================================
+                    TABLET VIEW
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .contact-section {
+        flex-direction: column;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .hero-form-container {
+        justify-content: center;
+    }
+
+    .contact-left h1 {
+        font-size: 36px;
+    }
+
+    .map-section {
+        padding: 0 20px;
+    }
+
+    .contact-extra {
+        padding: 60px 20px;
+    }
+}
+
+/* =========================================================
+                    MOBILE VIEW
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .contact-left h1 {
+        font-size: 28px;
+    }
+
+    .contact-left p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .map-section iframe {
+        height: 300px;
+    }
+
+    .contact-extra h2 {
+        font-size: 24px;
+    }
+}

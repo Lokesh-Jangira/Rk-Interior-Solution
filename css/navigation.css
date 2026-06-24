@@ -1,0 +1,764 @@
+/* =========================================================
+                PREMIUM GLASS-NAVBAR START 
+   ========================================================= */
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparency */
+    backdrop-filter: blur(10px);               /* Premium Blur Effect */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);   /* Light bottom shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    transition: var(--transition-smooth);      /* Smooth scrolling effect */
+}
+.nav-container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between; /* This handles the Left-Center-Right layout */
+    align-items: center;
+}
+
+/* 2. Three-Part Layout Logic */
+.nav-left {
+    flex: 1; /* Pushes center to middle */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-center {
+    flex: 2; /* Takes more space for menu */
+    display: flex;
+    justify-content: center; /* Menu in exact middle */
+}
+
+.nav-right {
+    flex: 1; /* Pushes center to middle */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+}
+
+/* 3. Logo */
+.site-logo {
+    width: 200px;
+    height: auto; /* Aspect ratio maintain karne ke liye */
+    display: block;
+}
+
+/* 4. Desktop Menu & Hover Logic */
+.nav-center-menu {
+    display: flex;
+    align-items: center; /* Sabhi items ko vertical center karega */
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Parent ki puri height lega */
+}
+
+.nav-center-menu li {
+    display: flex;
+    align-items: center; /* Li ke andar ka content bhi center rahega */
+}
+
+.nav-center-menu a {
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-transform: uppercase; /* Professional look ke liye caps */
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;      /* Readability ke liye halka gap */
+    transition: var(--transition-smooth);
+    display: inline-block;
+    position: relative;
+}
+
+.nav-center-menu a:hover {
+    color: var(--accent-blue);
+}
+
+/* Navbar links ke niche ka active indicator (Optional - clean look) */
+.nav-center-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-center-menu li a:hover::after {
+    width: 100%;
+}
+/* =========================================================
+   MEGA MENU - DESKTOP HOVER LOGIC
+   ========================================================= */
+
+/* 1. Services Parent Link (Triger) */
+.nav-center-more {
+    position: relative; /* Menu ko iske neeche align karne ke liye */
+    padding: 20px 0;    /* Ek 'invisible bridge' banane ke liye taaki mouse neeche le jate waqt menu band na ho */
+}
+
+/* 2. Mega Menu Container */
+
+.mega-menu {
+    position: absolute;
+    top: 100%;          /* Navbar ke thik neeche se start hoga */
+    left: 50%;
+    transform: translateX(-50%) translateY(15px); /* Animation: neeche se upar aane ke liye */
+    width: 650px;       /* Menu ki fixed width */
+    background: var(--white);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    
+    /* Layout Logic */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Do barabar columns */
+    gap: 30px;
+    border-top: 4px solid var(--accent-blue); /* Top accent line */
+
+    /* Visibility Logic (Hidden by default) */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Hidden state mein click block na kare */
+    transition: all 0.3s ease-in-out;
+    z-index: 1100;
+}
+
+/* 3. Hover State - Show Menu */
+.nav-center-more:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0); /* Normal position par aa jayega */
+}
+
+/* 4. Inside Menu - Columns & Headings */
+.menu-column h4 {
+    font-size: 0.75rem;
+    color: var(--secondary-blue);
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    font-family: var(--font-body); /* Heading font se thoda alag clean look */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 5px;
+}
+
+/* 5. Menu Boxes (Individual Items) */
+.menu-box, .menu-item {
+    margin-bottom: 10px;
+}
+
+.menu-box a, .menu-item a {
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.menu-box a:hover, .menu-item a:hover {
+    background-color: #F8FAFC; /* Premium subtle gray */
+    transform: translateX(5px); /* Slight slide on hover */
+}
+
+/* Titles inside Menu (Using your Playfair Display for premium feel) */
+.menu-box span, .menu-item strong {
+    display: block;
+    font-family: var(--font-heading); /* Playfair Display - Royal Feel */
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.menu-box p, .menu-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Badge Style */
+.badge {
+    background: var(--highlight-gold);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+/* 5. Right Section Buttons */
+.nav-right-call {
+    display: flex;
+    align-items: center; /* Icon aur number ko vertically center karega */
+    gap: 10px;           /* Icon aur number ke beech ka gap */
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1rem;     /* Size ko thoda balance kiya hai */
+    text-decoration: none;
+    white-space: nowrap; /* Sabse zaroori: Ye number ko do line mein nahi tootne dega */
+    transition: var(--transition-smooth);
+    flex-shrink: 0;
+}
+
+.nav-right-call i {
+    color: var(--accent-blue); /* Phone icon color */
+    font-size: 1.2rem;
+    display: flex;
+}
+
+.nav-right-call:hover {
+    color: var(--accent-blue);
+}
+
+/* ===== PREMIUM CTA BUTTON ===== */
+.nav-right-cta-btn {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: #fff;
+
+    padding: 10px 25px;
+    border-radius: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: .9rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+/* HOVER (soft glow, not loud) */
+.nav-right-cta-btn:hover {
+    background: linear-gradient(135deg, var(--accent-blue), #0056d2);
+    transform: translateY(-2px);
+}
+
+/* CLICK PRESS FEEL */
+.nav-right-cta-btn:active {
+    transform: scale(0.97);
+}
+
+/* ===== RIPPLE ===== */
+.nav-right-cta-btn span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    background: rgba(255,255,255,0.6);
+    animation: ripple-effect 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-effect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 6. Mobile View Fixes */
+.menu-toggle {
+    display: none; /* Desktop par nahi dikhega */
+    background: none;
+    border: none;
+    font-size: 2.2rem; /* Perfect size for thumb touch */
+    cursor: pointer;
+    color: var(--primary-blue);
+    margin-left: 20px;
+    padding: 5px;
+    transition: var(--transition-smooth);
+}
+
+/* =========================================================
+   PART 8.1: MOBILE SIDEBAR HEADER & LOGO ALIGNMENT
+   ========================================================= */
+
+/* Sidebar ke andar ka Logo */
+.mobile-menu .site-logo {
+    width: 150px;       /* Sidebar mein logo thoda chota rakhenge */
+    margin-bottom: 40px;
+    display: block;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 350px;
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    transition: 0.5s ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+.mobile-menu::-webkit-scrollbar {
+    width: 3px; 
+}
+
+.mobile-menu::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+    border-radius: 10px;
+}
+
+.mobile-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Close Button (X) - Styling improvement */
+.close-menu {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: #f1f5f9; /* Halka gray background circle */
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-menu:hover {
+    background-color: var(--accent-blue);
+    color: white;
+    transform: rotate(90deg); /* Modern feel ke liye rotate */
+}
+
+/* Sidebar Divider Line */
+.mobile-menu-divider {
+    height: 1px;
+    width: 100%;
+    background: rgba(0,0,0,0.05);
+    margin: 20px 0;
+}
+
+/* =========================================================
+   PART 9: MOBILE MENU LINKS & NESTED LISTS
+   ========================================================= */
+
+/* 1. Main List Container */
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.03); /* Halka divider */
+    padding-bottom: 15px;
+}
+
+/* 2. Primary Links (Home, About, etc.) */
+.mobile-menu ul li a {
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* 3. Section Headings (SERVICES / RESOURCES) */
+.mobile-menu h4 {
+    font-size: 0.8rem;
+    color: var(--secondary-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 30px 0 15px 0;
+    font-family: var(--font-body);
+    font-weight: 700;
+}
+
+/* 4. Sub-menu (Dropdown items inside sidebar) */
+.mobile-menu ul li ul {
+    padding-left: 15px;
+    margin-top: 15px;
+    border-bottom: none; /* Sub-menu items ke niche line nahi chahiye */
+}
+
+.mobile-menu ul li ul li {
+    margin-bottom: 12px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.mobile-menu ul li ul li a {
+    font-size: 1.1rem;
+    font-family: var(--font-heading); /* Playfair Display for elegance */
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* 5. Hover & Active State */
+.mobile-menu ul li a:active, 
+.mobile-menu ul li a:hover {
+    color: var(--accent-blue);
+    padding-left: 8px; /* Touch feedback animation */
+}
+
+/* =========================================================
+   PART 10: BACKGROUND OVERLAY & MOBILE OPTIMIZATION
+   ========================================================= */
+
+/* 1. The Overlay (Dimming the background) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Background ko dark karne ke liye */
+    backdrop-filter: blur(4px);    /* Background ko premium blur dene ke liye */
+    -webkit-backdrop-filter: blur(4px);
+    display: none;                 /* Default mein hide rahega */
+    z-index: 1500;                 /* Navbar aur Sidebar ke beech mein */
+    transition: opacity 0.4s ease;
+}
+
+/* Jab sidebar active hoga, tab overlay show hoga */
+.menu-overlay.active {
+    display: block;
+}
+
+/* =========================================================
+                   PREMIUM GLASS-NAVBAR END
+   ========================================================= */
+
+/* =========================================================
+                  FLOTING ICON START 
+   ========================================================= */   
+
+/* ====== Floting Icon Start ======== */
+.floating-icons {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.floating-icons .icon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.floating-icons .icon:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+}
+.floating-icons .whatsapp {
+  background-color: #25D366;
+}
+.floating-icons .call {
+  background-color: #FFC107;
+}
+.floating-icons .icon i {
+  font-size: 35px;
+  color: #fff;
+}
+.floating-icons .whatsapp {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* =========================================================
+                  FLOTING ICON END 
+   ========================================================= */
+
+/* =========================================================
+                    FOOTER START
+   ========================================================= */
+
+.footer {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 70px 40px 30px;
+}
+
+/* ===== GRID ===== */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* ===== COLUMN ===== */
+.footer-col h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+/* ===== LINKS ===== */
+.footer-col nav a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-col nav a:hover {
+    color: var(--highlight-gold);
+}
+
+/* ===== LIST ===== */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+}
+
+.footer-col ul li i {
+    color: var(--accent-blue);
+}
+
+/* ===== SOCIAL ICONS ===== */
+/* ===== CLEAN MINIMAL SOCIAL ICONS ===== */
+
+.footer-social {
+    display: flex;
+    gap: 12px; /* 🔥 gap kam */
+    margin-top: 20px;
+    padding: 0;
+}
+
+.footer-social li {
+    list-style: none;
+}
+
+/* ICON STYLE */
+.footer-social a, i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px; /* 🔥 icon bada */
+    font-weight: 600;
+
+    color: var(--text-muted); /* same color sabka */
+
+    padding: 4px;
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+/* ICON CENTER FIX */
+.footer-social a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== HOVER (desktop) + ACTIVE (mobile click) ===== */
+
+.footer-social a:nth-child(1):hover,
+.footer-social a:nth-child(1):active {
+    color: #1877f2;
+    background: rgba(24, 119, 242, 0.1);
+}
+
+.footer-social a:nth-child(2):hover,
+.footer-social a:nth-child(2):active {
+    color: #e4405f;
+    background: rgba(228, 64, 95, 0.1);
+}
+
+.footer-social a:nth-child(3):hover,
+.footer-social a:nth-child(3):active {
+    color: #0a66c2;
+    background: rgba(10, 102, 194, 0.1);
+}
+
+.footer-social a:nth-child(4):hover,
+.footer-social a:nth-child(4):active {
+    color: #ff0000;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.footer-social a:nth-child(5):hover,
+.footer-social a:nth-child(5):active {
+    color: #25D366;
+    background: rgba(37, 211, 102, 0.1);
+}
+/* ===== LINE ===== */
+.footer hr {
+    margin: 40px 0 20px;
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===== BOTTOM TEXT ===== */
+.footer-bottom {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* =========================================================
+                    FOOTER END
+   ========================================================= */
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .mobile-menu.active {
+        right: 0;
+    }
+    
+    /* Navbar height tablet ke liye thodi kam */
+    .navbar {
+        height: 70px;
+    }
+
+    /* Desktop elements ko hide karna */
+    .nav-center, 
+    .nav-right-call, 
+    .nav-right-cta-btn {
+        display: none;
+    }
+
+    /* Hamburger icon ko show karna */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Logo size tablet par halka chota */
+    .site-logo {
+        width: 160px;
+    }
+    /* === Footer Start === */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* === Footer End === */
+}
+
+@media (max-width: 480px) {
+    
+    .navbar {
+        height: 70px; /* Chote mobile par height kam */
+    }
+
+    .site-logo {
+        width: 140px; /* Logo size balanced for small screens */
+    }
+
+    .nav-container {
+        padding: 0 20px; /* Side gaps thode kam */
+    }
+
+    .menu-toggle {
+        font-size: 1.8rem; /* Toggle icon thoda chota */
+    }
+
+    .mobile-menu {
+        width: 85%; /* Menu ko thoda zyada space dena */
+        padding: 70px 25px 30px 25px;
+    }  
+    /* === Footer Start === */
+    .footer {
+        padding: 50px 20px 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-col h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-col p,
+    .footer-col ul li,
+    .footer-col nav a {
+        font-size: 0.85rem;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+    /* === Footer End === */ 
+}

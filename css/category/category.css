@@ -1,0 +1,375 @@
+/* ===== SECTION ===== */
+.ctg-section {
+    padding: 30px 20px;
+    max-width: var(--container-width);
+    margin: auto;
+}
+
+.ctg-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ctg-layout {
+    display: flex;
+    gap: 25px;
+}
+
+/* ===== SIDEBAR ===== */
+.ctg-sidebar {
+    width: 25%;
+    top: 80px;
+}
+
+.ctg-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ctg-tabs li {
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* HOVER + ACTIVE */
+.ctg-tabs li:hover {
+    background: rgba(162, 59, 76, 0.08);
+}
+
+.ctg-tabs li.active {
+    background: rgba(162, 59, 76, 0.12);
+    border-left: 3px solid var(--accent-blue);
+}
+
+/* ===== CONTENT ===== */
+.ctg-content {
+    width: 75%;
+}
+
+/* GRID */
+.ctg-grid {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ctg-grid.active {
+    display: grid;
+    animation: fade 0.4s ease;
+}
+
+/* CARD */
+.ctg-grid li {
+    background: var(--white);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.ctg-grid img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.ctg-grid h3 {
+    padding: 10px;
+}
+
+.ctg-grid p {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* ANIMATION */
+@keyframes fade {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== IMAGE POPUP ===== */
+
+.image-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+
+    z-index: 9999;
+}
+
+.image-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* IMAGE */
+.image-popup img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 6px;
+    animation: zoomIn 0.4s ease;
+}
+
+/* CLOSE BUTTON */
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    font-size: 32px;
+    color: #fff;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.seo-content a {
+    color: var(--accent-blue);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* =========================================================
+                FAQ SECTION Start
+   ========================================================= */
+.faq-section {
+    max-width: var(--container-width);
+    margin-top: -40px;
+    padding: 60px 20px;
+}
+
+/* HEADER */
+.faq-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.faq-header p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* CONTAINER */
+.faq-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ITEM */
+.faq-item {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* QUESTION BUTTON */
+.faq-question {
+    width: 100%;
+    padding: 18px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: none;
+    border: none;
+
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    color: var(--accent-blue);
+}
+
+/* ICON */
+.faq-question i {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* ANSWER */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+
+    font-size: 0.9rem;
+    color: var(--text-light);
+
+    line-height: 1.6;
+    padding: 0 10px;
+
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+/* ACTIVE STATE */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 10px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg); /* + → × */
+}
+/* =========================================================
+                FAQ SECTION End
+   ========================================================= */
+
+/* ================= DESKTOP HERO FIX ================= */
+@media (min-width: 993px) {
+    
+    /* === Seo section Pc margin Start === */
+    .seo-section {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .seo-content {
+        max-width: 1000px;   /* 🔥 readable width */
+        margin: 0 auto;     /* center align */
+    }
+    /* === Seo section Pc margin End === */
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+
+    .ctg-layout {
+        flex-direction: column;
+    }
+
+    .ctg-sidebar {
+        width: 100%;
+        overflow-x: auto;
+        top: 75px;
+        background: var(--bg-light);
+        z-index: 100;
+    }
+
+    .ctg-tabs {
+        display: flex;
+        gap: 10px;
+    }
+
+    .ctg-tabs li {
+        flex: 0 0 auto;
+        background: rgba(255,255,255,0.4);
+        border: 1px solid var(--accent-blue);
+    }
+
+    .ctg-content {
+        width: 100%;
+    }
+
+    .ctg-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ctg-tabs {
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .ctg-tabs::-webkit-scrollbar {
+        display: none;
+    }
+    /* === FAQ START === */
+    .faq-section {
+        padding: 50px 20px;
+    }
+
+    .faq-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .faq-header p {
+        font-size: 0.9rem;
+    }
+
+    .faq-container {
+        max-width: 90%;
+    }
+
+    .faq-question {
+        font-size: 0.95rem;
+        padding: 16px 8px;
+    }
+
+    .faq-answer {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+     /* === FAQ End === */
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+
+    .ctg-tabs {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .ctg-tabs li {
+        min-width: 65%;
+        white-space: nowrap;
+        font-size: 1rem;
+    }
+
+    .ctg-grid {
+        grid-template-columns: 1fr;
+    }
+    /* === FAQ Start === */
+    .faq-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .faq-question {
+        font-size: 0.95rem;
+        padding: 15px 5px;
+    }
+
+    .faq-answer {
+        font-size: 0.85rem;
+    }
+    /* === FAQ END === */
+}
